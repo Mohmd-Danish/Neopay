@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neofin Technologies Private Limited | Home</title>
+  <link rel="icon" type="image/png" href="Assets/Images/logo/favicon.png">
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Assets/CSS/headFoot.css">
+  <link rel="stylesheet" href="Assets/CSS/home.css">
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+  <!-- Font Family -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&dispaly=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">
+        <a href="#"><img class="logo_two" src="Assets/Images/logo/logo-black.png" alt="logo"></a>
+      </div>
+      <ul>
+        <a href="#">
+          <li>Home</li>
+        </a>
+        <a href="about.html">
+          <li>About Us</li>
+        </a>
+        <a href="contact.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+      <div id="opener" onclick="opener()" class="menuBar">
+        <span style="font-size: 3rem;" class="material-symbols-outlined">
+          menu_open
+        </span>
+      </div>
+      <div id="closer" onclick="closer()" class="cross">
+        <span class="material-symbols-outlined">
+          cancel
+        </span>
+      </div>
+    </nav>
+
+
+    <nav id="hidden" class="container">
+      <ul>
+        <a href="#">
+          <li>Home</li>
+        </a>
+        <a href="about.html">
+          <li>About Us</li>
+        </a>
+        <a href="contact.html">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </nav>
+    <script src="Assets/JS/header.js"></script>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container">
+        <div class="wrapper">
+          <div class="images">
+            <div class="img-1">
+              <div style="width: 50%;padding-left: 2rem; gap: 3rem; display: flex; flex-direction: column;"
+                class="text">
+                <h2 style="font-size: 4rem;">Your new digital experience with NeoPay</h2>
+                <p>The fastest and easiest way to collect and disburse payments</p>
+              </div>
+            </div>
+            <div class="img-2">
+
+            </div>
+          </div>
+          <div class="slider">
+            <div class="drag-line">
+              <span></span>
+            </div>
+            <input type="range" min="0" max="100" value="50">
+          </div>
+        </div>
+
+        <script>
+          const slider = document.querySelector(".slider input");
+          const img = document.querySelector(".images .img-2");
+          const dragLine = document.querySelector(".slider .drag-line");
+          slider.oninput = () => {
+            let sliderVal = slider.value;
+            dragLine.style.left = sliderVal + "%";
+            img.style.width = sliderVal + "%";
+          }
+        </script>
+      </div>
+
+    </section>
+
+    <!-- product Section -->
+    <section id="product">
+      <div style="display: flex;" class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; padding: 20px; width: 60%;" class="cards">
+          <div class="item">
+            <img src="Assets/Images/service-icon-1.png" alt="">
+            <h3 style="color: #0089B7; text-align: left; margin: 1rem 0;">Quick Loans</h3>
+            <p style="font-size: 1rem;">Easy access to collateral free loans to build and grow your business. Based on
+              credit history, our NBFCs and banking partners evaluate your credit worthiness and offer your business
+              collateral free loans.</p>
+          </div>
+          <div class="item">
+            <img src="Assets/Images/service-icon-1.png" alt="">
+            <h3 style="color: #0089B7; text-align: left; margin: 1rem 0;">Payment Link</h3>
+            <p style="font-size: 1rem;">The smart way to get the beneficiary account details and other finanical details
+              is to send out easy-to-create links to capture these details and also to process instant payouts.</p>
+          </div>
+          <div class="item">
+            <img src="Assets/Images/service-icon-1.png" alt="">
+            <h3 style="color: #0089B7; text-align: left; margin: 1rem 0;">Wallets</h3>
+            <p style="font-size: 1rem;">The smart way to get the beneficiary account details and other finanical details
+              is to send out easy-to-create links to capture these details and also to process instant payouts.</p>
+          </div>
+          <div class="item">
+            <img src="Assets/Images/service-icon-1.png" alt="">
+            <h3 style="color: #0089B7; text-align: left; margin: 1rem 0;">Corporate Credit Card</h3>
+            <p style="font-size: 1rem;">With minimal documentation work, we will get you instantly approved corporate
+              credit cards for your business. It is simple and swift.</p>
+          </div>
+
+        </div>
+        <div
+          style="padding: 20px; display: flex; flex-direction: column; justify-content: center; width: 40%; gap: 2rem;"
+          class="image">
+          <h2 style="color: #0089B7;">Products</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic atque reprehenderit quia natus ab saepe?</p>
+          <img style="width: 100%;" src="Assets/Images/product.jpg" alt="">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- feature Section -->
+    <section id="feature">
+      <img class="img img_1" src="Assets/Images/mesh4.png" alt="">
+      <img class="img img_2" src="Assets/Images/hero-shape-3-3.png" alt="">
+      <div class="container">
+        <h2 style="color: #F79F1A; text-align: center;">Features</h2>
+        <p style=" color: #0089B7; text-align: center; margin: 2rem 0;">We empower your business with exciting payment
+          features.</p>
+        <div class="boxes">
+          <div class="card">
+            <h3>Instant Activation</h3>
+            <p>Simple and instant activation of business account. It takes just two minutes to activate the account and
+              start making transactions. All this with minimal documentation work.</p>
+          </div>
+          <div class="card">
+            <h3>Simple Integration</h3>
+            <p>Designed to be user-friendly, it has plugins for all major platforms and languages. Our efficiency
+              coupled with our super smart features facilitates you in going live in just 2-3 hours.</p>
+          </div>
+          <div class="card">
+            <h3>API Driven</h3>
+            <p>API driven automation enhances the efficiency and performance of your business. Since everything is fully
+              automated, it requires zero manual intervention.</p>
+          </div>
+          <div class="card">
+            <h3>Plethora of Payment Modes</h3>
+            <p>Customers are usually inclined to opt for company that offers more payment mode options. Our payment
+              gateway is compatible with 100+ payment modes, which includes credit/debit cards, net-banking, UPI, mobile
+              wallets, etc.</p>
+          </div>
+          <div class="card">
+            <h3>Reliable Customer Support</h3>
+            <p>If you have a query or a problem at hand, we can count on us for answers and quick resolutions. You can
+              write to us, call us or reach out to our chat-based support.</p>
+          </div>
+          <div class="card">
+            <h3>Fool-proof Security</h3>
+            <p>Being a PCI DSS complaint, our payment gateway is water-tight secure. Once you opt for services, you can
+              put our fears of unsafe payment transaction to rest.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- steps Section -->
+    <section id="steps">
+      <img class="img img_2" src="Assets/Images/hero-shape-3-4.png" alt="">
+      <div class="container">
+        <h1 style="color: #EA001B;">Steps</h1>
+        <h3 style="margin: 2rem 0; color: #000;">Make your payment in three easy steps.</h3>
+        <div class="steps">
+
+          <div class="stage">
+            <div class="content">
+              <span>01</span>
+              <div class="text">
+                <h3 style=" text-align: left; color: #0089B7;">Sign-Up</h3>
+                <p style=" text-align: left;">Following the document verification, you can sign-up with us for a
+                  business account. If you already have a business account, you can directly link to our payment
+                  gateway.</p>
+              </div>
+            </div>
+            <img src="Assets/Images/signup.jpg" alt="">
+          </div>
+
+          <img style="width: 50%; margin: auto;" src="Assets/Images/arrow-2.png" alt="">
+
+          <div class="stage ">
+            <img src="Assets/Images/send_recieve.jpg" alt="">
+            <div class="content right">
+              <span>02</span>
+              <div class="text">
+                <h3 style=" text-align: left; color: #0089B7;">Send & Receive Payment</h3>
+                <p style=" text-align: left;">Make and receive payments through our integrated online payment gateway.
+                  You can also raise GST compliant invoices for these transactions.</p>
+              </div>
+            </div>
+          </div>
+
+          <img style="width: 50%; margin: auto;" src="Assets/Images/arrow-1.png" alt="">
+
+          <div class="stage">
+            <div class="content">
+              <span>03</span>
+              <div class="text">
+                <h3 style=" text-align: left; color: #0089B7;">Automated Accounting</h3>
+                <p style=" text-align: left;">You can organize your business transactions into different categories such
+                  as income & expenses,reconcile payments, and others. You will also have access accounting statements.
+                </p>
+              </div>
+            </div>
+            <img src="Assets/Images/accounting.jpg" alt="">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- action Section -->
+    <section id="action">
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="container">
+        <h2>Call to Action</h2>
+        <p style="color: #fff; text-align: center;">Need assistance in handling your complex payment flow or require
+          payment-related advice? Talk to our seasoned payment experts.</p>
+        <a class="button" href="">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- subscribe Section -->
+    <section id="subscribe">
+      <p style="text-align: center; color: #fff;">Subscribe</p>
+      <h3>Get in touch to see more feature</h3>
+      <div class="container">
+        <div class="content">
+          <p style="color: #fff; text-align: left;">Join Us</p>
+          <p style="text-align: left; color: #fff;">Become our patron to experience the best-in-the-industry payment
+            gateway
+            assistance.</p>
+
+          <form>
+            <fieldset>
+              <legend>&nbsp&nbspJoin Us:&nbsp&nbsp</legend>
+              <input placeholder="abcd@gmail.com" type="text" id="fname" name="fname">
+              <a class="button" href="">SIGN-UP</a>
+            </fieldset>
+            <!-- <input type="submit" value="Submit"> -->
+          </form>
+
+          <img class="img" src="Assets/Images/neoPayCheckout.gif"></img>
+          <div class="tags">
+
+          </div>
+        </div>
+        <div class="image">
+          <img src="Assets/Images/joinus.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- Drag Section -->
+    <section id="Drag">
+      <h1>Services</h1>
+      <p style="text-align: center; color: #fff;">Our curated payment solutions to cater to requirements of our clients
+      </p>
+      <div class="container">
+        <div class="wrapper">
+          <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
+          <ul class="carousel">
+            <li class="card">
+              <h2>Payment Gateway</h2>
+              <div class="img"><img src="Assets/Images/fea-2-1.png" alt="img" draggable="false"></div>
+              <span>Designed to be user-friendly, our payment gateway offers seamless customer experience. It can be
+                easily incorporated into your website or app.</span>
+            </li>
+            <li class="card">
+              <h2>Payment Pages</h2>
+              <div class="img"><img src="Assets/Images/fea-2-1.png" alt="img" draggable="false"></div>
+              <span>You can customize your pages to accept payments without much effort.</span>
+            </li>
+
+            <li class="card">
+              <h2>Payment Link</h2>
+              <div class="img"><img src="Assets/Images/fea-2-1.png" alt="img" draggable="false"></div>
+
+              <span>You can share payment link with your customers via email, SMS, and Messenger. After the payment is
+                made, the amount will be directly credited to your account.</span>
+            </li>
+            <li class="card">
+              <h2>Subscription</h2>
+              <div class="img"><img src="Assets/Images/fea-2-1.png" alt="img" draggable="false"></div>
+              <span>You can create an automated subscription plan for recurring transactions.</span>
+            </li>
+
+
+          </ul>
+          <!-- <i id="right" class="fa-solid fa-angle-right"></i> -->
+        </div>
+      </div>
+      <script src="Assets/JS/drag.js"></script>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container">
+      <div class="top">
+        <h2><Span style="color: #EA001B;">N</Span>eo <span style="color: #F79F1A;">P</span>ay</h2>
+        <p>If your business needs assistance in digital payments, then we are a force to be reckon with. With NeoPay
+          payment gateway, you can instantly setup a business account, automate payments, and acquire collateral-free
+          capital loans with ease. Capitalizing on our state-of-the-art technology, you can offer your customers a
+          simplified and secure online payment experience with multiple options.</p>
+      </div>
+      <div class="bottom">
+        <div class="container">
+          <div class="logo">
+            <img src="Assets/Images/logo/logo-black.png" alt="">
+          </div>
+          <div class="quickLink">
+            <ul>
+              <a href="#">
+                <li>Home</li>
+              </a>
+              <a href="about.html">
+                <li>About Us</li>
+              </a>
+              <a href="contact.html">
+                <li>Contact</li>
+              </a>
+            </ul>
+          </div>
+          <div class="social">
+            <div class="icon">
+              <a href="https://www.facebook.com/profile.php?id=100063944204803" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="icon">
+              <a href="https://www.instagram.com/mightquite_technology/?hl=en" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="icon">
+              <a href="https://in.linkedin.com/company/mightquite" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="icon">
+              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="container">Created with &hearts; By MOHAMMED SAAHAB &copy 2023 All rights reserved.</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+@keyframes tpfadeUp{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }  
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+#hero .container{
+    display: flex;justify-content: space-around;
+}
+#hero .container .content{
+    display: flex; flex-direction: column;justify-content: space-around;align-items: center;
+}
+#hero .container .content h1{
+    color: #1C145D;text-align: center;
+}
+#hero .container .content p{
+    text-align: center;
+}
+#hero .container .content,
+#hero .container .image{
+    width: 40%;
+}
+#hero .provide .sticker .item{
+    display: flex;flex-direction: column;justify-content: center;align-items: center;
+    gap: 1rem;
+}
+#hero .provide .sticker .item img{
+    transition: 1s;
+}
+#hero .provide .sticker .item img:hover{
+    transform: rotate(360deg);
+}
+#hero .provide .sticker .item h4{
+    border-bottom: 0.4rem transparent solid;text-align: center;
+    transition: 0.3s ease-in-out;color: #1C145D;
+}
+#hero .provide .sticker .item h4:hover{
+    border-bottom: 0.4rem #EA001B solid;
+}
+
+#onboard{
+    position: relative;    
+}
+#onboard .top{
+    position: absolute;
+  top: 0;
+  left: 0;z-index: -1;
+  width: 100%;
+  height: 50%;
+ 
+}
+#onboard .bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;z-index: -1;
+    width: 100%;
+    height: 50%;
+    background: #F1EFFD;
+}
+#onboard .container{
+    background: #F1EFFD;border-radius: 20px; padding: 1rem 0;
+}
+#onboard .container .cards{
+    display: flex;flex-wrap: wrap;justify-content: space-around;
+}
+#onboard .container .cards .card{
+    box-shadow: -1px -2px 39px rgb(32 70 94 / 10%);
+    min-width: 250px; width: 22%;background: #fff;border-radius: 10px; display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 20px;padding: 20px;
+}
+#onboard .container .cards .card img{
+    transition: 1s;
+}
+#onboard .container .cards .card img:hover{
+    transform: rotate(360deg);
+}
+#onboard .container .cards .card p{
+ text-align: center;
+}

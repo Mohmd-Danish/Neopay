@@ -1,0 +1,487 @@
+/* Hero Section */
+#hero{
+    background: linear-gradient(to left top, #3C2655, #584968);
+}
+#hero .container{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #efefef;
+}
+#hero .container .wrapper{
+  position: relative;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  /* border: 7px solid #fff; */
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+#hero .container .wrapper .images{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+#hero .container .wrapper .images .img-1{
+  height: 100%;
+  width: 100%;
+  display: flex;gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/demo.jpg") no-repeat;
+  background-size: cover;
+}
+#hero .container .wrapper .images .img-2{
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  animation: slide 2s;
+  /* filter: blur(5px); */
+  background: url("/images/demo.jpg.jpg") no-repeat;
+  background-size: cover;
+}
+@keyframes slide {
+    0% {
+      width: 0%;
+    }  
+    100% {
+      width: 50%;
+    }
+}
+#hero .container .wrapper .slider{
+  position: absolute;
+  top: 0;height: 100%;
+  width: 100%;
+  z-index: 99;
+}
+#hero .container .wrapper .slider input{
+  width: 100%;
+  outline: none;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.slider input::-webkit-slider-thumb{
+  height: 486px;
+  width: 3px;
+  background: none;
+  -webkit-appearance: none;
+  cursor: col-resize;
+}
+.slider .drag-line{
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 25%;
+  animation: slid 2s;
+  pointer-events: none;
+}
+@keyframes slid {
+    0% {
+      left: 0;
+    }  
+    100% {
+      left: 50%;
+    }
+}
+
+
+.slider .drag-line::before,
+.slider .drag-line::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 45%;
+  background: #fff;
+}
+.slider .drag-line::before{
+  top: 0;
+}
+.slider .drag-line::after{
+  bottom: 0;
+}
+.slider .drag-line span{
+  height: 42px;
+  width: 42px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider .drag-line span::before,
+.slider .drag-line span::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  border: 10px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.slider .drag-line span::before{
+  left: 40%;
+  border-left-color: #fff;
+}
+.slider .drag-line span::after{
+  left: 60%;
+  border-top-color: #fff;
+}
+/* ==================== Media Query ==================== */
+/* ==================== End hero Section ==================== */
+
+
+/* Product Section */
+#product{
+    background: linear-gradient(to left bottom, #3C2655, #584968);
+}
+
+#product .container{
+    background: #E2F5F3;
+    border-radius: 20px 0;
+}
+#product .container .cards .item{
+    min-width: 320px; padding: 4rem 3rem; background: #fff;
+    width: 45%;
+}
+#product .container .cards .item img{
+    transition: 1s;
+}
+#product .container .cards .item img:hover{
+    transform: rotate(360deg);
+}
+/* ==================== Media Query ==================== */
+/* ==================== End product Section ==================== */
+
+
+/* Feature Section */
+
+#feature {
+  position: relative;padding-bottom: 5rem;
+    /* background: url(/Assets/Images/cta-shape-1.png); */
+    /* background-repeat: no-repeat; */
+}
+#feature .img{
+  position: absolute;
+}
+#feature .img_1{
+  bottom: 0;left: 0;opacity: 0.4;
+}
+#feature .img_2{
+  top: 0;right: 0;
+}
+#feature .container{
+  margin-bottom: 2rem;
+}
+#feature .container .boxes{
+    display: flex; flex-wrap: wrap; gap: 1rem;row-gap: 4rem;justify-content: space-around;
+}
+#feature .container .boxes .card{
+    width: 25%;border: 1px dashed #aeaeae;
+    display: flex;justify-content: space-around;
+    flex-direction: column;min-width: 300px;
+    gap: 2rem;height: 22.5rem;
+    padding: 20px;border-radius: 15px;
+}
+#feature .container .boxes .card h3{
+    color: #0089B7;
+}
+#feature .container .boxes .card p{
+    font-size: 1.2rem;
+}
+/* ==================== Media Query ==================== */
+/* ==================== End feature Section ==================== */
+
+
+
+/* steps Section */
+
+#steps{
+  /* background: #F79F1A; */text-align: center;
+  background: #fff;position: relative;
+  /* background: linear-gradient(to left top, #FBCF8C, #F79F1A); */
+}
+#steps .img{
+  position: absolute;
+}
+#steps .img_2{
+  top: -5rem ;right: 0;
+}
+#steps .container .steps{
+  display: flex;gap: 1rem;
+  flex-direction: column;
+}
+
+#steps .container .stage{
+  display: flex; justify-content: space-around;
+}
+#steps .container .stage .content{
+  display: flex;align-items: center; gap: 2rem; width: 40%;
+}
+#steps .container .stage .text{
+  width: 50%; min-width: 350px; height: 370px; background: #fff; display: flex; flex-direction: column; justify-content: space-around; padding: 2rem 1rem;
+  background: linear-gradient(to left top, #FBCF8C, #F79F1A);border-radius: 20px 0;
+}
+#steps .container .right{
+  justify-content: right;
+}
+#steps .container .stage span{
+  text-align: center;font-size: 2rem; color: #fff;background: #0089B7; border-radius: 50%;padding: 1rem;
+  transition: 1s;width: 69px;height: 69px;
+}
+#steps .container .stage span:hover{
+  transform: rotate(360deg);
+}
+#steps .container .stage img{
+  width: 25%; border-radius: 50%; border: 1px dashed #0089B7; padding: 1rem;
+  position: relative;animation: jump 2s infinite backwards;transition: ease;
+}
+@keyframes jump {
+  0% {top: 0;}  
+  25% {top: 30px;}
+  50%{bottom: 30px;}
+  100%{top: 0;}
+}
+/* ==================== Media Query ==================== */
+/* ==================== End steps Section ==================== */
+
+
+/* action Section */
+
+#action{
+  position: relative;
+}
+#action .top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+#action .bottom{
+  position: absolute;
+    bottom: 0;
+    left: 0;z-index: -1;
+    width: 100%;
+    height: 50%;
+    background: #0F77EA;
+}
+#action .container{
+  width: 60%;border-radius: 20px; border: none;background: #3C2655;z-index: 50;padding:20px 40px;
+  display: flex;justify-content: center;align-items: center;gap: 1rem;flex-direction: column;
+}
+#action .container .button{
+  border: none;
+}
+#action .container .button:hover{
+  background: #F79F1A;color: #fff;
+}
+/* ==================== Media Query ==================== */
+/* ==================== End action Section ==================== */ 
+
+
+/* subscribe Section */
+
+#subscribe{
+  background: #0F77EA;
+  /* height: 50vh; */
+}
+#subscribe .container{
+  display: flex; justify-content: space-around;
+}
+#subscribe .container .content{
+  width: 40%;
+}
+#subscribe .container .content form{
+  margin: 3rem 0;
+}
+#subscribe .container .content form fieldset{
+  display: flex;justify-content: space-between;
+  padding: 5px 20px;background: #000;border-radius: 10px;
+}
+#subscribe .container .content form input{
+  width: 70%;
+    background: #000;outline: none;
+    border: none;border-radius: 10px;
+    border-bottom: 3px solid red;
+    border-left: 3px solid red;
+    padding: 5px 10px;
+}
+#subscribe .container .content form input::placeholder{
+  color: #fff;
+}
+#subscribe .container .content form .button{
+  margin: 0;
+}
+#subscribe .container .content form .button:hover{
+  background: #F79F1A;color: #fff;
+}
+#subscribe .container .image{
+  animation: jump 2s infinite backwards;position: relative;
+  width: 35%; padding: 20px;
+}
+#subscribe .container .image img{
+  width: 100%;
+}
+/* ==================== Media Query ==================== */
+
+@media screen and (max-width: 750px) {
+  #subscribe .container{
+    flex-direction: column-reverse;align-items: center;gap: 2rem;
+  }
+  #subscribe .container .image{
+    width: 85%;
+  }
+  #subscribe .container .content{
+    width: 85%;
+  }
+  #subscribe .container .content .img{
+    width: 100%;
+  }
+}
+
+/* ==================== End subscribe Section ==================== */
+
+/* Drag Section */
+
+#Drag {
+  background:#0F77EA;
+}
+
+#Drag .container {
+  display: flex;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  /* background: linear-gradient(to left top, #031A9A, #8B53FF); */
+}
+
+#Drag .container .wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding: 5% 0;
+}
+
+#Drag .container .wrapper i {
+  top: 50%;
+  /* color: #fff; */
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: var(--dark-color);
+  /* background: #ffff; */
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+#Drag .container .wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+#Drag .container .wrapper i:first-child {
+  left: -22px;
+}
+
+#Drag .container .wrapper i:last-child {
+  right: -22px;
+}
+
+#Drag .container .wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 400px;gap: 1.5rem;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.carousel .card .img {
+  /* background: var(--dark-color); */
+  height: 100px;
+  width: 100px;transition: 1s;
+  border-radius: 50%;
+}
+.carousel .card .img:hover{
+  transform: rotate(360deg);
+}
+.carousel .card .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+  font-weight: 500;
+  color: #6A6D78;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .card span {
+  color: #6A6D78;
+  text-align: center;
+  font-size: 1.31rem;
+}
+/* ==================== Media Query ==================== */
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px)!important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%!important;
+  }
+}
+/* ==================== End Drag Section ==================== */

@@ -1,0 +1,244 @@
+
+
+/* Header Section */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* background: #f79f1a80; */
+    background: var(--header-color);
+}
+
+nav {
+    display: flex;
+    height: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+nav .logo {
+    /* width: 110px; */
+    /* height: 70px; */
+    display: flex;
+    align-items: center;
+}
+
+nav .logo .logo_one {
+    height: 50px;
+}
+
+nav .logo .logo_two {
+    height: 35px;
+    width: 130px;
+}
+
+nav ul {
+    display: flex;
+    gap: 4rem;
+}
+
+nav li {
+    font-size: 1.4rem;
+    color: #000;
+    text-align: center;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.3s ease-in-out;
+}
+
+nav li:hover {
+    /* border-bottom: 0.4rem var(--secondary-color) solid; */
+    border-bottom: 0.4rem #EA001B solid;
+
+    /* color: var(--secondary-color); */
+    transition: 0.3s ease-in-out;
+}
+
+nav .menuBar {
+    display: none;
+}
+
+#hidden {
+    display: none;
+    height: 50vh;
+    position: relative;
+    /* flex-direction: column; */
+    border-radius: 10px;
+    background: var(--darker-color);
+    border: 2rem solid var(--secondary-color);
+}
+
+header .cross {
+    display: none;
+}
+
+.cross span {
+    font-size: 3rem;
+}
+
+.cross span:hover {
+    color: var(--secondary-color);
+}
+
+#hidden ul {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+}
+#hidden ul li{
+    color: #fff;
+}
+#hidden ul li:hover {
+    border-bottom: 0.4rem transparent solid;
+    color: var(--secondary-color);
+    transition: 0.3s ease-in-out;
+}
+
+/* ==================== Media Query ==================== */
+@media (max-width:880px) {
+    nav ul {
+        gap: 2rem;
+    }
+}
+
+@media (max-width:685px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav li {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:880px) {
+    nav ul {
+        gap: 10px;
+    }
+}
+
+@media (max-width:450px) {
+
+    header .container ul {
+        display: none;
+    }
+
+    nav .menuBar {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width:450px) {
+    nav .menuBar {
+        display: none !important;
+    }
+
+    #hidden {
+        display: none !important;
+    }
+
+    header .cross {
+        display: none !important;
+    }
+}
+
+/* ==================== End Hearder Section ==================== */
+
+footer{
+    background: #6f9196;
+    /* background: #304146; */
+}
+footer .container .top{
+    width: 70%;margin: auto;
+}
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+    }  
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+footer .container .top h2{
+    transition: all 0.3s ease-out 0s;
+    visibility: visible;color: #000;
+    animation: fadeup 0.9s 0.3s forwards;
+    text-align: center;opacity: 0;
+}
+footer .container .top p{
+    transition: all 0.3s ease-out 0s;
+    visibility: visible;opacity: 0;
+    animation: fadeup 0.9s 0.5s forwards;
+    text-align: center;margin: 2rem 0 4rem;
+    color: #fff;font-size: 20px;
+}
+footer .container .bottom{
+    border-top: 1px solid #2C2F94;
+    padding-top: 40px;opacity: 0;
+    transition: all 0.3s ease-out 0s;
+    /* visibility: visible; */
+    animation: fadeup 0.9s 0.9s forwards;
+}
+footer .container .bottom .container {
+    display: flex; justify-content: space-around;margin-top: 1rem;padding-bottom: 3rem;
+}
+footer .container .bottom .container .logo img{
+    height: 50px;
+    width: 200px;
+}
+footer .container .bottom .container .quickLink{
+    width: 25%;
+}
+footer .container .bottom .container .quickLink ul{
+    display: flex; justify-content: space-around;gap: 1rem;
+}
+footer .container .bottom .container .quickLink ul li{
+    font-size: 1.4rem;
+}
+footer .container .bottom .container .quickLink ul li:hover{
+    color: #EA001B;
+}
+footer .container .bottom .container .social{
+    display: flex; justify-content: space-around;gap: 1rem;
+}
+footer .container .bottom .container .social .icon{
+    height: 50px;width: 50px; background: #2C2F94;border-radius: 50%;
+    display: flex; justify-content: center;align-items: center;transition: 1s;
+}
+footer .container .bottom .container .social .icon:hover{
+    transform: rotate(360deg);
+}
+footer .container .bottom .container .social .icon i{
+    color: #fff; font-size: 1.5rem;
+}
+.copyright{
+    background: #304146;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 750px) {
+    footer .container .bottom .container {
+        flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    }
+    footer .container .bottom .container .quickLink {
+        width: 70%;
+    }
+    footer .container .bottom .container .logo img {
+        height: 70px;
+        width: 300px;
+    }
+}
